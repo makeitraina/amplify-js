@@ -2,12 +2,12 @@ import * as React from 'react';
 
 import { JS } from '@aws-amplify/core';
 
-import '@aws-amplify/ui/dist/style.css';
+// import '@aws-amplify/ui/dist/style.css';
 import * as AmplifyUI from '@aws-amplify/ui';
 
 import AmplifyTheme from './Amplify-UI-Theme';
 
-export const Container = props => {
+export const Container = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	const style = propStyle(props, theme.container);
 	const p = JS.objectLessAttributes(props, 'theme');
@@ -19,7 +19,7 @@ export const Container = props => {
 	);
 };
 
-export const FormContainer = props => {
+export const FormContainer = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	return beforeAfter(
 		<div className={AmplifyUI.formContainer} style={theme.formContainer}>
@@ -28,7 +28,7 @@ export const FormContainer = props => {
 	);
 };
 
-export const FormSection = props => {
+export const FormSection = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	const style = propStyle(props, theme.formSection);
 	return (
@@ -42,7 +42,7 @@ export const FormSection = props => {
 	);
 };
 
-export const SectionHeader = props => {
+export const SectionHeader = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	const style = propStyle(props, theme.sectionHeader);
 	const p = JS.objectLessAttributes(props, 'theme');
@@ -58,7 +58,7 @@ export const SectionHeader = props => {
 	);
 };
 
-export const SectionHeaderContent = props => {
+export const SectionHeaderContent = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	const style = propStyle(props, theme.sectionHeaderContent);
 	return beforeAfter(
@@ -68,7 +68,7 @@ export const SectionHeaderContent = props => {
 	);
 };
 
-export const SectionFooter = props => {
+export const SectionFooter = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	const style = propStyle(props, theme.sectionFooter);
 	const p = JS.objectLessAttributes(props, 'theme');
@@ -79,7 +79,7 @@ export const SectionFooter = props => {
 	);
 };
 
-export const SectionFooterPrimaryContent = props => {
+export const SectionFooterPrimaryContent = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	const style = propStyle(props, theme.sectionFooterPrimaryContent);
 	return beforeAfter(
@@ -89,7 +89,7 @@ export const SectionFooterPrimaryContent = props => {
 	);
 };
 
-export const SectionFooterSecondaryContent = props => {
+export const SectionFooterSecondaryContent = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	const style = propStyle(props, theme.sectionFooterSecondaryContent);
 	return beforeAfter(
@@ -99,7 +99,7 @@ export const SectionFooterSecondaryContent = props => {
 	);
 };
 
-export const SectionBody = props => {
+export const SectionBody = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	const style = propStyle(props, theme.sectionBody);
 	const p = JS.objectLessAttributes(props, 'theme');
@@ -110,7 +110,7 @@ export const SectionBody = props => {
 	);
 };
 
-export const ActionRow = props => {
+export const ActionRow = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	const style = propStyle(props, theme.actionRow);
 	const p = JS.objectLessAttributes(props, 'theme');
@@ -121,7 +121,7 @@ export const ActionRow = props => {
 	);
 };
 
-export const Strike = props => {
+export const Strike = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	const style = propStyle(props, theme.strike);
 	return beforeAfter(
@@ -131,7 +131,7 @@ export const Strike = props => {
 	);
 };
 
-export const StrikeContent = props => {
+export const StrikeContent = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	return beforeAfter(
 		<span className={AmplifyUI.strikeContent} style={theme.strikeContent}>
@@ -140,7 +140,7 @@ export const StrikeContent = props => {
 	);
 };
 
-export const FormRow = props => {
+export const FormRow = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	const style = propStyle(props, theme.formRow);
 	const p = JS.objectLessAttributes(props, 'theme');
@@ -151,7 +151,7 @@ export const FormRow = props => {
 	);
 };
 
-export const RadioRow = props => {
+export const RadioRow = (props) => {
 	const id = props.id || '_' + props.value;
 	const theme = props.theme || AmplifyTheme;
 	return (
@@ -164,7 +164,7 @@ export const RadioRow = props => {
 	);
 };
 
-export const Radio = props => {
+export const Radio = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	const style = propStyle(props, theme.radio);
 	const p = JS.objectLessAttributes(props, 'theme');
@@ -173,7 +173,7 @@ export const Radio = props => {
 	);
 };
 
-export const InputRow = props => {
+export const InputRow = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	const style = propStyle(props, theme.input);
 	const p = JS.objectLessAttributes(props, 'theme');
@@ -184,14 +184,14 @@ export const InputRow = props => {
 	);
 };
 
-export const Input = props => {
+export const Input = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	const style = propStyle(props, theme.input);
 	const p = JS.objectLessAttributes(props, 'theme');
 	return <input {...p} className={AmplifyUI.input} style={style} />;
 };
 
-export const SelectInput = props => {
+export const SelectInput = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	const style = propStyle(props, theme.selectInput);
 	return (
@@ -201,7 +201,7 @@ export const SelectInput = props => {
 	);
 };
 
-export const FormField = props => {
+export const FormField = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	const style = propStyle(props, theme.formField);
 	const p = JS.objectLessAttributes(props, 'theme');
@@ -212,7 +212,7 @@ export const FormField = props => {
 	);
 };
 
-export const Button = props => {
+export const Button = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	const style = propStyle(props, theme.button);
 	const disabled = props.disabled || false;
@@ -229,7 +229,7 @@ export const Button = props => {
 	);
 };
 
-export const PhotoPickerButton = props => {
+export const PhotoPickerButton = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	const style = propStyle(props, theme.photoPickerButton);
 	const p = JS.objectLessAttributes(props, 'theme');
@@ -244,7 +244,7 @@ export const PhotoPickerButton = props => {
 	);
 };
 
-export const SignInButton = props => {
+export const SignInButton = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	const styles = Object.assign({}, theme.signInButton, theme[props.variant]);
 	const p = JS.objectLessAttributes(props, 'theme');
@@ -256,7 +256,7 @@ export const SignInButton = props => {
 	);
 };
 
-export const SignInButtonIcon = props => {
+export const SignInButtonIcon = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	const style = propStyle(props, theme.signInButtonIcon);
 	const p = JS.objectLessAttributes(props, 'theme');
@@ -267,7 +267,7 @@ export const SignInButtonIcon = props => {
 	);
 };
 
-export const SignInButtonContent = props => {
+export const SignInButtonContent = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	const style = propStyle(props, theme.signInButtonContent);
 	return beforeAfter(
@@ -277,7 +277,7 @@ export const SignInButtonContent = props => {
 	);
 };
 
-export const Link = props => {
+export const Link = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	const style = propStyle(props, theme.a);
 	const p = JS.objectLessAttributes(props, 'theme');
@@ -288,7 +288,7 @@ export const Link = props => {
 	);
 };
 
-export const Label = props => {
+export const Label = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	const style = propStyle(props, theme.label);
 	const p = JS.objectLessAttributes(props, 'theme');
@@ -299,7 +299,7 @@ export const Label = props => {
 	);
 };
 
-export const Hint = props => {
+export const Hint = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	const style = propStyle(props, theme.hint);
 	return beforeAfter(
@@ -309,7 +309,7 @@ export const Hint = props => {
 	);
 };
 
-export const InputLabel = props => {
+export const InputLabel = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	const style = propStyle(props, theme.inputLabel);
 	return beforeAfter(
@@ -319,7 +319,7 @@ export const InputLabel = props => {
 	);
 };
 
-export const NavBar = props => {
+export const NavBar = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	const style = propStyle(props, theme.navBar);
 	const p = JS.objectLessAttributes(props, 'theme');
@@ -330,7 +330,7 @@ export const NavBar = props => {
 	);
 };
 
-export const Nav = props => {
+export const Nav = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	const style = propStyle(props, theme.nav);
 	const p = JS.objectLessAttributes(props, 'theme');
@@ -341,7 +341,7 @@ export const Nav = props => {
 	);
 };
 
-export const NavRight = props => {
+export const NavRight = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	const style = propStyle(props, theme.navRight);
 	const p = JS.objectLessAttributes(props, 'theme');
@@ -352,7 +352,7 @@ export const NavRight = props => {
 	);
 };
 
-export const NavItem = props => {
+export const NavItem = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	const style = propStyle(props, theme.navItem);
 	const p = JS.objectLessAttributes(props, 'theme');
@@ -363,7 +363,7 @@ export const NavItem = props => {
 	);
 };
 
-export const NavButton = props => {
+export const NavButton = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	const style = propStyle(props, theme.navButton);
 	const p = JS.objectLessAttributes(props, 'theme');
@@ -374,7 +374,7 @@ export const NavButton = props => {
 	);
 };
 
-export const Toast = props => {
+export const Toast = (props) => {
 	const { onClose } = props;
 	const theme = props.theme || AmplifyTheme;
 
@@ -396,7 +396,7 @@ Toast.defaultProps = {
 	onClose: () => void 0,
 };
 
-export const PhotoPlaceholder = props => {
+export const PhotoPlaceholder = (props) => {
 	const theme = props.theme || AmplifyTheme;
 	const style = propStyle(props, theme.photoPlaceholder);
 	return (
@@ -417,7 +417,7 @@ export const PhotoPlaceholder = props => {
 	);
 };
 
-export const beforeAfter = el => {
+export const beforeAfter = (el) => {
 	const style = el.props.style || {};
 	const { before, after } = style;
 	if (!before && !after) {
